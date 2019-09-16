@@ -1,10 +1,10 @@
-* , *:before, *:after {
-    box-sizing: inherit;
-}
-
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+}
+
+* , *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
 
 /*Globals*/
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -68,6 +69,7 @@ h4 {
 .contenido-centrado {
     max-width: 800px;
 }
+
 /***********************Botones************************/
 .boton {
     color: white;
@@ -358,4 +360,9 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/***************Contacto*****************/
+label {
+    display: block;
 }
