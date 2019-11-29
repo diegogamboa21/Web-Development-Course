@@ -1,87 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Blog de Viajes</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e1b60ce664.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header class="site-header contenedor">
-        <img src="img/logo.png" alt="logotipó">
+      <img src="img/logo.png" alt="logotipó" />
     </header>
 
     <div class="barra">
-        <nav class="navegacion-principal contenedor">
+      <a href="#nav" class="mobile-menu">
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+
+      <nav id="nav" class="navegacion-principal contenedor">
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Blog</a>
+        <a href="#">Tienda</a>
+        <a href="#">Contacto</a>
+        <a href="#" class="cerrar">
+          <i class="fas fa-window-close"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="contenedor">
+      <main class="contenido-principal">
+        <article class="entrada">
+          <h2>Viajar a Londres</h2>
+          <img src="img/imagen_1.jpg" alt="imagen viaje a Londres" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+            voluptatum non qui suscipit consectetur? Dolorum, laudantium
+            voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia,
+            hic.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Iusto soluta repudiandae esse
+            sint incidunt excepturi, iste facilis praesentium!
+          </p>
+          <a href="#" class="boton">Leer Más</a>
+        </article>
+
+        <article class="entrada">
+          <h2>Puente de la Torre</h2>
+          <img src="img/imagen_2.jpg" alt="imagen puente de la torre" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+            voluptatum non qui suscipit consectetur? Dolorum, laudantium
+            voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia,
+            hic.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Vel cupiditate expedita error
+            magni voluptates dolor non perferendis exercitationem!
+          </p>
+          <a href="#" class="boton">Leer Más</a>
+        </article>
+
+        <article class="entrada">
+          <h2>Metro de Londres</h2>
+          <img src="img/imagen_3.jpg" alt="imagen metro de Londres" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+            voluptatum non qui suscipit consectetur? Dolorum, laudantium
+            voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia,
+            hic.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Aspernatur autem, ipsa velit
+            beatae consequatur sed cupiditate. Inventore, voluptate.
+          </p>
+          <a href="#" class="boton">Leer Más</a>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <section class="otras-entradas">
+          <h2>Otros Posts</h2>
+          <ul>
+            <li><a href="#">Entrada</a></li>
+            <li><a href="#">Entrada</a></li>
+            <li><a href="#">Entrada</a></li>
+            <li><a href="#">Entrada</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer-sitio">
+      <div class="contenedor clearfix">
+        <section class="nosotros">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+            ullam reprehenderit magni impedit. Architecto blanditiis ex cumque.
+          </p>
+        </section>
+        <section class="menu">
+          <h2>Menú de Navegación</h2>
+          <nav>
             <a href="#">Inicio</a>
             <a href="#">Nosotros</a>
             <a href="#">Blog</a>
             <a href="#">Tienda</a>
             <a href="#">Contacto</a>
-        </nav>
-    </div>
-
-    <div class="contenedor">
-        <main class="contenido-principal">
-            <article class="entrada">
-                <h2>Viajar a Londres</h2>
-                <img src="img/imagen_1.jpg" alt="imagen viaje a Londres">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore voluptatum non qui suscipit consectetur? Dolorum, laudantium voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia, hic.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta repudiandae esse sint incidunt excepturi, iste facilis praesentium!</p>
-                <a href="#" class="boton">Leer Más</a>
-            </article>
-            
-            <article class="entrada">
-                <h2>Puente de la Torre</h2>
-                <img src="img/imagen_2.jpg" alt="imagen puente de la torre">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore voluptatum non qui suscipit consectetur? Dolorum, laudantium voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia, hic.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cupiditate expedita error magni voluptates dolor non perferendis exercitationem!</p>
-                <a href="#" class="boton">Leer Más</a>
-            </article>
-            
-            <article class="entrada">
-                <h2>Metro de Londres</h2>
-                <img src="img/imagen_3.jpg" alt="imagen metro de Londres">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore voluptatum non qui suscipit consectetur? Dolorum, laudantium voluptates. Aliquid accusantium molestias unde et fugiat! Mollitia, hic.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi est sequi earum nemo ab labore officia eos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur autem, ipsa velit beatae consequatur sed cupiditate. Inventore, voluptate.</p>
-                <a href="#" class="boton">Leer Más</a>
-            </article>
-        </main>
-
-        <aside class="sidebar">
-            <section class="otras-entradas">
-                <h2>Otros Posts</h2>
-                <ul>
-                    <li><a href="#">Entrada</a></li>
-                    <li><a href="#">Entrada</a></li>
-                    <li><a href="#">Entrada</a></li>
-                    <li><a href="#">Entrada</a></li>
-                </ul>
-            </section>
-        </aside>
-    </div>
-
-    <footer class="footer-sitio">
-        <div class="contenedor clearfix">
-            <section class="nosotros">
-                <h2>Sobre Nosotros</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ullam reprehenderit magni impedit. Architecto blanditiis ex cumque.</p>
-            </section>
-            <section class="menu">
-                <h2>Menú de Navegación</h2>
-                <nav>
-                    <a href="#">Inicio</a>
-                    <a href="#">Nosotros</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Tienda</a>
-                    <a href="#">Contacto</a>
-                </nav>
-            </section>
-        </div>
-        <p class="copyright">Blog de Viajes - Todos los Derechos Reservados 2019 &copy;</p>
+          </nav>
+        </section>
+      </div>
+      <p class="copyright">
+        Blog de Viajes - Todos los Derechos Reservados 2019 &copy;
+      </p>
     </footer>
-    
-</body>
+  </body>
 </html>
