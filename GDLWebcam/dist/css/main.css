@@ -447,6 +447,21 @@ div.detalle-evento p {
   margin-top: 20px;
   display: inline-block;
   transition: all 0.3s ease;
+  border: 2px solid #fe4918;
+}
+
+.boton.hollow .boton.hollow:hover {
+  background: white;
+  color: #fe4918;
+}
+
+.boton.transparente {
+  background: transparent;
+  border-color: white;
+}
+
+.boton.transparente:hover {
+  border-color: #e33000;
 }
 
 .boton:hover {
@@ -559,6 +574,228 @@ p.numero {
   color: #fe4918;
   font-size: 4em;
   margin: 0 0 10px 0;
+  font-family: "Oswald", sans-serif;
+}
+
+ul.lista-precios > li {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  ul.lista-precios > li {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+div.tabla-precio {
+  border: 1px solid #e1e1e1;
+  background: white;
+  padding: 40px 0;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+div.tabla-precio:hover {
+  transform: scale(1.1);
+  border: 1px solid #fe4918;
+  box-shadow: 0 0 50px 0 #666;
+}
+
+div.tabla-precio ul li {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #868686;
+  line-height: 26px;
+}
+
+div.tabla-precio ul li::before {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  padding: 0 5px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+}
+
+div.tabla-precio h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+div.tabla-precio p.numero {
+  color: black;
+  margin: 20px 0;
+}
+
+div.mapa {
+  height: 420px;
+  background: chartreuse;
+}
+
+div.testimoniales {
+  padding-bottom: 20px;
+}
+
+div.testimonial {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.testimonial {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+blockquote {
+  background: white;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+
+blockquote p {
+  text-align: justify !important;
+  font-size: 0.8em !important;
+  font-family: "PT Sans", sans-serif;
+  padding: 0 20px 0 65px;
+}
+
+blockquote p::before {
+  content: "\201c";
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1;
+  color: #fe4918;
+}
+footer.info-testimonial {
+  padding: 0;
+}
+
+footer.info-testimonial img {
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+footer.info-testimonial cite {
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+footer.info-testimonial cite span {
+  color: black;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+}
+
+div.newsletter {
+  position: relative;
+  height: auto;
+}
+
+div.newsletter::before {
+  background: url(../img/bg-newsletter.jpg);
+  content: "";
+}
+
+div.newsletter .contenido {
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+
+div.newsletter .contenido p {
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+
+div.newsletter .contenido h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: "PT Sans", sans-serif;
+}
+
+div.cuenta-regresiva ul li {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  div.cuenta-regresiva ul li {
+    width: 25%;
+    float: left;
+  }
+}
+
+footer.site-footer {
+  background: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+footer .footer-contenido > div {
+  color: white;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .footer-contenido > div {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+footer.site-footer h3 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+footer.site-footer h3 span {
+  color: #fe4918;
+}
+
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+}
+
+footer nav.redes-sociales {
+  text-align: left;
+}
+
+p.copyright {
+  background: #2e2e2e;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  color: white;
 }
 
 /* ==========================================================================
@@ -703,6 +940,7 @@ p.numero {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
      * Printing Tables:
      * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
