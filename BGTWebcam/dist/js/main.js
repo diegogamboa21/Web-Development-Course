@@ -28,18 +28,15 @@
 
 
     calcular.addEventListener('click', calcularMontos);
+
     pase_dia.addEventListener('blur', mostrarDias);
     pase_dos_dias.addEventListener('blur', mostrarDias);
     pase_completo.addEventListener('blur', mostrarDias);
-    nombre.addEventListener('blur', function () {
-      if (this.value === "") {
-        errorDiv.style.display = 'block';
-        error.style.color = "red";
-        errorDiv.innerHTML = "Este campo es obligatorio";
-        this.style.border = "1px solid red";
-        this.style.borderRadius = "2px";
-      }
-    });
+
+    nombre.addEventListener('blur', validarCampos);
+    apellido.addEventListener('blur', validarCampos);
+    email.addEventListener('blur', validarCampos);
+    email.addEventListener('blur', validarMail);
 
     function calcularMontos(event) {
       event.preventDefault();
@@ -93,7 +90,37 @@
 
     }
 
+    function validarCampos() {
+      if (this.value === "") {
+        errorDiv.style.display = 'block';
+        error.style.color = "red";
+        errorDiv.innerHTML = "Este campo es obligatorio";
+        this.style.border = "1px solid red";
+        this.style.borderRadius = "2px";
+      } else {
+        errorDiv.style.display = 'none';
+        this.style.border = '1px solid #cccccc';
+        this.style.backgroundColor = 'transparent';
+      }
+    }
 
+    function validarMail() {
+      if (isValidEmail(this.value)) {
+        errorDiv.style.display = 'none';
+        this.style.border = '1px solid #cccccc';
+        this.style.backgroundColor = 'transparent';
+      } else {
+        errorDiv.style.display = 'block';
+        error.style.color = "red";
+        errorDiv.innerHTML = "Introduce un correo valido";
+        this.style.border = "1px solid red";
+        this.style.borderRadius = "2px";
+      }
+    }
+
+    function isValidEmail(mail) {
+      return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail);
+    }
 
   }); // DOM Content Loaded
 

@@ -931,7 +931,10 @@ div.paquetes .tabla-precio input {
 }
 
 #error {
+  display: none;
   clear: both;
+  padding: 12px;
+  text-align: center;
 }
 
 /* ==========================================================================
