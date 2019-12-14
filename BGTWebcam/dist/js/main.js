@@ -1,6 +1,18 @@
 (function () {
   "use strict";
 
+  if (document.getElementById('mapa')) {
+    var map = L.map('mapa').setView([4.678418, -74.133816], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([4.678418, -74.133816]).addTo(map)
+      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+      .openPopup();
+  }
+
   var regalo = document.getElementById('regalo');
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -121,6 +133,8 @@
     function isValidEmail(mail) {
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail);
     }
+
+
 
   }); // DOM Content Loaded
 
