@@ -119,6 +119,7 @@ h1.nombre-sitio {
 }
 
 .contenedor {
+  max-width: 1200px;
   width: 98%;
   margin: 0 auto;
 }
@@ -577,12 +578,12 @@ p.numero {
   font-family: "Oswald", sans-serif;
 }
 
-ul.lista-precios > li {
+ul.lista-precios>li {
   padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {
-  ul.lista-precios > li {
+  ul.lista-precios>li {
     float: left;
     width: 33.3%;
   }
@@ -679,6 +680,7 @@ blockquote p::before {
   line-height: 1;
   color: #fe4918;
 }
+
 footer.info-testimonial {
   padding: 0;
 }
@@ -758,14 +760,14 @@ footer.site-footer {
   margin-top: 20px;
 }
 
-footer .footer-contenido > div {
+footer .footer-contenido>div {
   color: white;
   padding: 0 20px;
   font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-  footer .footer-contenido > div {
+  footer .footer-contenido>div {
     float: left;
     width: 33.3%;
   }
@@ -796,6 +798,140 @@ p.copyright {
   margin: 0;
   text-align: center;
   color: white;
+}
+
+/** PAGINAS INTERNAS **/
+form.registro h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+form.registro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+div.caja {
+  background: white;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  margin: 10px;
+}
+
+div.campo {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.campo {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+div.paquetes .tabla-precio:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+div.paquetes .tabla-precio input {
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+.contenido-dia {
+  padding: 20px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenido-dia>div {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+.contenido-dia>div p {
+  text-align: left;
+
+}
+
+.contenido-dia>div label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 2px 20px 2px 0;
+}
+
+.contenido-dia>div input {
+  margin-right: 10px;
+
+}
+
+.contenido-dia>div label time {
+  color: #e33000;
+  font-weight: bold;
+}
+
+.resumen p {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.resumen .extras {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+.extras .orden {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.extras .orden input,
+.extras .orden select {
+  margin: 10px 0 20px 0;
+  display: block;
+}
+
+
+.resumen .total {
+  float: right;
+  width: 50%;
+  padding: 0 30px;
+}
+
+.resumen input {
+  display: block;
+  margin: 10px auto;
+}
+
+#lista_productos {
+  background: #e1e1e1;
+  padding: 20px;
+  display: none;
+}
+
+#suma_total {
+  text-align: center;
+  font-size: 2em;
+  color: #fe4918;
+  margin-bottom: 20px;
+}
+
+#error {
+  clear: both;
 }
 
 /* ==========================================================================
@@ -892,9 +1028,9 @@ p.copyright {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -905,6 +1041,7 @@ p.copyright {
    ========================================================================== */
 
 @media print {
+
   *,
   *:before,
   *:after {
@@ -914,16 +1051,20 @@ p.copyright {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
+
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
+
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -932,9 +1073,11 @@ p.copyright {
   a[href^="javascript:"]:after {
     content: "";
   }
+
   pre {
     white-space: pre-wrap !important;
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
@@ -948,16 +1091,19 @@ p.copyright {
   thead {
     display: table-header-group;
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
