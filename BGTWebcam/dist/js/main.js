@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  //Cargar Mapa
   if (document.getElementById('mapa')) {
     var map = L.map('mapa').setView([4.678418, -74.133816], 15);
 
@@ -9,8 +10,8 @@
     }).addTo(map);
 
     L.marker([4.678418, -74.133816]).addTo(map)
-      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      .openPopup();
+      .bindTooltip('BGTWebCamp 2019.<br> Ubicación principal.')
+      .openTooltip();
   }
 
   var regalo = document.getElementById('regalo');
