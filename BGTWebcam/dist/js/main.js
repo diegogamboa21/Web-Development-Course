@@ -39,17 +39,16 @@
     var camisaEvento = document.getElementById('camisa_evento');
     var etiquetas = document.getElementById('etiquetas');
 
+    calcular ? calcular.addEventListener('click', calcularMontos) : "";
 
-    calcular.addEventListener('click', calcularMontos);
+    pase_dia ? pase_dia.addEventListener('blur', mostrarDias) : "";
+    pase_dos_dias ? pase_dos_dias.addEventListener('blur', mostrarDias) : "";
+    pase_completo ? pase_completo.addEventListener('blur', mostrarDias) : "";
 
-    pase_dia.addEventListener('blur', mostrarDias);
-    pase_dos_dias.addEventListener('blur', mostrarDias);
-    pase_completo.addEventListener('blur', mostrarDias);
-
-    nombre.addEventListener('blur', validarCampos);
-    apellido.addEventListener('blur', validarCampos);
-    email.addEventListener('blur', validarCampos);
-    email.addEventListener('blur', validarMail);
+    nombre ? nombre.addEventListener('blur', validarCampos) : "";
+    apellido ? apellido.addEventListener('blur', validarCampos) : "";
+    email ? email.addEventListener('blur', validarCampos) : "";
+    email ? email.addEventListener('blur', validarMail) : "";
 
     function calcularMontos(event) {
       event.preventDefault();
@@ -135,8 +134,76 @@
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail);
     }
 
-
-
   }); // DOM Content Loaded
 
 })();
+
+$(function () {
+
+  //**LETTERING**//
+  $('.nombre-sitio').lettering();
+
+  //**MENU FIJO**//
+  var windowHeight = $(window).height();
+  var barraAltura = $('.barra').innerHeight();
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > windowHeight) {
+      $('.barra').addClass('fixed');
+      $('body').css({
+        'margin-top': barraAltura + 'px'
+      });
+    } else {
+      $('.barra').removeClass('fixed');
+      $('body').css({
+        'margin-top': '0px'
+      });
+    }
+  })
+
+  //**MENU RESPONSIVE**//
+  $('.menu-movil').on('click', function () {
+    $('.navegacion-principal').slideToggle();
+  });
+
+  //**PROGRAMA DE CONFERENCIAS **//
+  $('.programa-evento .info-curso:first').show();
+  $('.menu-programa a').addClass('activo');
+
+  $('.menu-programa a').on('click', function () {
+    $('.ocultar').hide();
+    $('.menu-programa a').removeClass('activo');
+    $(this).addClass('activo');
+    var enlace = $(this).attr('href');
+    $(enlace).fadeIn(1000);
+
+    return false;
+  });
+
+  //**ANIMACIONES PARA LOS NUMEROS**//
+  $('.resumen-evento li:nth-child(1) p').animateNumber({
+    number: 6
+  }, 1200);
+
+  $('.resumen-evento li:nth-child(2) p').animateNumber({
+    number: 15
+  }, 1200);
+
+  $('.resumen-evento li:nth-child(3) p').animateNumber({
+    number: 3
+  }, 1500);
+
+  $('.resumen-evento li:nth-child(4) p').animateNumber({
+    number: 9
+  }, 1500);
+
+  //**CUENTA REGRESIVA**//
+  $('.cuenta-regresiva').countdown('2020/01/10 09:00:00', function (e) {
+    $('#dias').html(e.strftime('%D'));
+    $('#horas').html(e.strftime('%H'));
+    $('#minutos').html(e.strftime('%M'));
+    $('#segundos').html(e.strftime('%S'));
+  });
+
+});

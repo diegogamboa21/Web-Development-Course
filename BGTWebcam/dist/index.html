@@ -70,7 +70,7 @@
       </div>
 
       <nav class="navegacion-principal clearfix">
-        <a href="#">Conferencia</a>
+        <a href="conferencia.html">Conferencia</a>
         <a href="#">Calendario</a>
         <a href="#">Invitados</a>
         <a href="registro.html">Reservaciones</a>
@@ -123,6 +123,51 @@
               <p><i class="fas fa-user-alt"></i> Diego Gamboa</p>
             </div>
             <!--Detalle-evento-->
+
+
+            <a href="" class="boton float-right">Ver Todos</a>
+          </div>
+          <!--#talleres-->
+
+          <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Como ser freelancer</h3>
+              <p><i class="far fa-clock"></i> 10:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user-alt"></i> Davis Martinez</p>
+            </div>
+            <!--Detalle-evento-->
+
+            <div class="detalle-evento">
+              <h3>Tecnologias del futuro</h3>
+              <p><i class="far fa-clock"></i> 12:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user-alt"></i> Amanda Soto</p>
+            </div>
+            <!--Detalle-evento-->
+
+
+            <a href="" class="boton float-right">Ver Todos</a>
+          </div>
+          <!--#talleres-->
+
+          <div id="seminarios" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Mobile desing</h3>
+              <p><i class="far fa-clock"></i> 16:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user-alt"></i> Diego Gamboa</p>
+            </div>
+            <!--Detalle-evento-->
+
+            <div class="detalle-evento">
+              <h3>Aprende a programar en 1 hora</h3>
+              <p><i class="far fa-clock"></i> 20:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user-alt"></i> Diego Gamboa</p>
+            </div>
+            <!--Detalle-evento-->
+
 
             <a href="" class="boton float-right">Ver Todos</a>
           </div>
@@ -187,19 +232,19 @@
     <div class="contenedor">
       <ul class="resumen-evento clearfix">
         <li>
-          <p class="numero">6</p>
+          <p class="numero"></p>
           Invitados
         </li>
         <li>
-          <p class="numero">15</p>
+          <p class="numero"></p>
           Talleres
         </li>
         <li>
-          <p class="numero">3</p>
+          <p class="numero"></p>
           Dias
         </li>
         <li>
-          <p class="numero">9</p>
+          <p class="numero"></p>
           Conferencias
         </li>
       </ul>
@@ -316,19 +361,19 @@
     <div class="cuenta-regresiva">
       <ul class="clearfix">
         <li>
-          <p class="numero">80</p>
+          <p id="dias" class="numero"></p>
           Días
         </li>
         <li>
-          <p class="numero">15</p>
+          <p id="horas" class="numero"></p>
           Horas
         </li>
         <li>
-          <p class="numero">5</p>
+          <p id="minutos" class="numero"></p>
           Minutos
         </li>
         <li>
-          <p class="numero">30</p>
+          <p id="segundos" class="numero"></p>
           Segundos
         </li>
       </ul>
@@ -396,6 +441,9 @@
 
   <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="js/vendor/jquery.animateNumber.min.js"></script>
+  <script src="js/vendor/jquery.countdown.min.js"></script>
+  <script src="js/vendor/jquery.lettering.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
