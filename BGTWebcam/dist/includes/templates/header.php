@@ -13,6 +13,19 @@
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+  <?php 
+    $archivo = basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php", "", $archivo);
+
+    if($pagina == 'invitados' || $pagina == 'index'){
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+    }
+    else if($pagina == 'conferencia'){
+      echo '<link rel="stylesheet" href="css/lightbox.css">';
+    }
+  ?>
+  
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/fontawesome-all.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans&display=swap" rel="stylesheet" />
@@ -20,7 +33,7 @@
   <meta name="theme-color" content="#fafafa" />
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
   <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -74,7 +87,7 @@
       <nav class="navegacion-principal clearfix">
         <a href="conferencia.php">Conferencia</a>
         <a href="calendario.php">Calendario</a>
-        <a href="#">Invitados</a>
+        <a href="invitados.php">Invitados</a>
         <a href="registro.php">Reservaciones</a>
       </nav>
     </div>
